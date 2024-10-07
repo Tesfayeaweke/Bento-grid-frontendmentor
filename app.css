@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body{
+    font-family: "DM Sans", system-ui;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #f5f5f5;
+    
+
+}
+
+.container{
+    /* border: 2px solid red; */
+    width: 90%;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2em;
+    
+    
+}
+.container>*{
+   
+    background-color: yellowgreen;
+    /* margin: 30px; */
+    padding: 1em 2em;
+    border-radius: 1em;
+}
+img{
+    width: 100%;
+}
+.content{
+    text-align: center;
+}
+p{
+    font-size: 2.5rem;
+    font-weight: 500;
+    width: 100%;
+    /* border: 2px solid red; */
+    
+}
+.container #first{
+    background-color: hsl(256, 67%, 59%);
+}
+
+.container #first p{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+.container #first p span{
+    color: hsl(39, 100%, 71%);
+}
+.container #first p span:nth-of-type(2){
+    font-style: italic;
+    color: #fff;
+}
+.container #first p:nth-of-type(2){
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+.container #first .content #first-image{
+    /* border: 2px solid yellow; */
+    width: 50%;
+}
+.container #second{
+    background-color:  hsl(0, 0%, 100%);
+}
+.container #third{
+    background-color: hsl(39, 100%, 71%);
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: end; 
+    align-items: center;
+    
+}
+.container #third img{
+    /* text-align: end;
+    margin-top: 3em; */
+    margin-bottom: 0;
+    /* border: 2px solid red; */
+    width: 100%;
+}
+.container #third p{
+    font-size: 1.5em;
+}
+.container #fourth{
+    background-color: hsl(254, 88%, 90%);
+    
+}
+.container #fourth p:last-of-type{
+    /* border: 2px solid greenyellow; */
+    font-size: 1.5rem;
+}
+.container #fifth{
+    background-color: hsl(256, 67%, 59%);
+}
+.container #fifth p{
+    color: #fff;
+}
+.container #sixth{
+    background-color:#fff ;
+}
+.container #sixth p{
+    font-size: 1.5rem;
+}
+.container #sixth p span{
+    font-size: 4rem;
+}
+.container #seventh{
+    background-color: hsl(31, 66%, 93%);
+}
+.container #seventh img{
+    width: 75%;
+    
+
+}
+
+.container #seventh p span{
+    color: hsl(256, 67%, 59%);
+    font-style: italic;
+}
+.container #eighth{
+    background-color: hsl(39, 100%, 71%);
+}
+.container #eighth p{
+    font-weight: 500;
+}
+@media(min-width:781px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 1fr 0.25fr 0.5fr 0.75fr;
+        /* grid-auto-rows: minmax(1fr,250px); */
+        grid-gap: 2rem;
+    }
+
+    .container #seventh{
+        grid-column: 1/2;
+        grid-row: 1/span 2;
+    }
+
+    .container #first{
+        grid-column: 2/span 2;
+    }
+    .container #second{
+        grid-row: 2/4;
+        grid-column: 2;
+    }
+    .container #third{
+        grid-row: 2/4;
+        grid-column: 3;
+    }
+    .container #fourth{
+        grid-column: 4;
+        grid-row: 1/span 3;
+    }
+    .container #fifth{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* padding: 0; */
+        grid-row: 4;
+        grid-column: 3/span 2;
+        
+    }
+    .container #sixth{
+        grid-row: 4;
+        grid-column: 2;
+    }
+    .container #eighth{
+        grid-column: 1;
+        grid-row: 3/span 2;
+        /* min-height: 800px; */
+    }
+}
